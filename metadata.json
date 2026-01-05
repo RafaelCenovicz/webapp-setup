@@ -1,0 +1,7 @@
+{
+  "name": "Monte seu Setup",
+  "description": "Visualize o setup gamer dos seus sonhos fazendo upload de uma foto do seu espaço atual e deixando o Gemini transformá-lo com componentes de ponta e iluminação RGB.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
