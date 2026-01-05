@@ -1,5 +1,5 @@
 
-import { PCComponent } from './types';
+import { PCComponent } from './types.ts';
 
 export const PC_COMPONENTS: PCComponent[] = [
   { id: 'glass-case', name: 'Gabinete de Vidro', category: 'Gabinete', description: 'Torre moderna com laterais em vidro temperado', icon: 'fa-box' },

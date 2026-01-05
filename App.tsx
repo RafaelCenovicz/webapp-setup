@@ -1,9 +1,9 @@
 
 import React, { useState, useCallback, useRef } from 'react';
-import { PC_COMPONENTS } from './constants';
-import { SetupState, GenerationHistoryItem } from './types';
-import { generateDreamSetup } from './services/geminiService';
-import ComponentCard from './components/ComponentCard';
+import { PC_COMPONENTS } from './constants.ts';
+import { SetupState, GenerationHistoryItem } from './types.ts';
+import { generateDreamSetup } from './services/geminiService.ts';
+import ComponentCard from './components/ComponentCard.tsx';
 
 const App: React.FC = () => {
   const [state, setState] = useState<SetupState>({
@@ -69,7 +69,7 @@ const App: React.FC = () => {
       setState(prev => ({ 
         ...prev, 
         isGenerating: false, 
-        error: "Falha ao gerar o setup dos seus sonhos. Tente novamente." 
+        error: "Falha ao gerar o setup dos seus sonhos. Verifique se a chave de API está configurada." 
       }));
     }
   };

@@ -1,13 +1,15 @@
 
 import { GoogleGenAI } from "@google/genai";
-import { MODEL_NAME } from "../constants";
+import { MODEL_NAME } from "../constants.ts";
 
 export const generateDreamSetup = async (
   base64Image: string,
   selectedComponents: string[],
   customPrompt: string = ""
 ): Promise<string> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  // Verificação de segurança para o ambiente do navegador
+  const apiKey = typeof process !== 'undefined' ? process.env.API_KEY : (window as any).API_KEY;
+  const ai = new GoogleGenAI({ apiKey: apiKey });
   
   const dataOnly = base64Image.split(',')[1] || base64Image;
 
